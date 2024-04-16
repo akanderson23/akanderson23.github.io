@@ -1,10 +1,10 @@
 body {
-    background: #8B0000; /* Dark red background */
+    background: #F6BE00; /* yellow background */
     font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-    color: #0000FF; /* Blue text */
+    color: #000000; /* Blue text */
     text-align: center;
 }
 
@@ -12,7 +12,7 @@ h1 {
     display: flex;
     padding: 10px;
     margin: 10px;
-    background: #00CED1; /* Dark turquoise background */
+    background: #0000FF; /* Dark turquoise background */
 }
 
 .assign img {

@@ -4,7 +4,7 @@ body {
 }
 
 h1 {
-    color: #000000; /* Blue text */
+    color: #000000; /* Black text */
     text-align: center;
 }
 
@@ -12,7 +12,7 @@ h1 {
     display: flex;
     padding: 10px;
     margin: 10px;
-    background: #0000FF; /* Dark turquoise background */
+    background: #FF0000; /* Red background */
 }
 
 .assign img {

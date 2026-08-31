@@ -1,10 +1,11 @@
+
 /* Structural */
 body {
     font-family: Georgia, 'Times New Roman', serif;
     background-color: #2b2b2b;
     margin: 0;
 }
-
+ 
 #content {
     background-color: #f4f0e8;
     width: 50%;
@@ -13,31 +14,93 @@ body {
     border-radius: 8px;
     border: 3px solid #73000a;
 }
-
+ 
+#assignments,
+#projects {
+    margin-top: 30px;
+}
+ 
 /* Typography */
 h1 {
     color: #73000a;
 }
-
+ 
 h2 {
     color: #444;
 }
-
+ 
 p {
     color: #222;
 }
-
+ 
 #repo {
     font-size: .9em;
     color: #555;
 }
-
+ 
 /* Links */
 a {
     color: #73000a;
     text-decoration: none;
 }
-
+ 
 a:hover {
     color: #b0242f;
 }
+ 
+/* Assignment / Project cards */
+.card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+ 
+.card-img {
+    width: 100%;
+    display: block;
+}
+ 
+.card-info {
+    padding: 15px;
+}
+ 
+.card-info h3 {
+    color: #73000a;
+    margin-top: 0;
+}
+ 
+.card-info a {
+    display: inline-block;
+    margin-top: 8px;
+    font-weight: bold;
+}
+ 
+/* Responsive Design */
+ 
+/* 700px or larger: image sits beside the text instead of on top */
+@media screen and (min-width: 700px) {
+    .card {
+        flex-direction: row;
+    }
+ 
+    .card-img {
+        width: 250px;
+        flex-shrink: 0;
+    }
+ 
+    #content {
+        width: 65%;
+    }
+}
+ 
+/* below 700px, #content should stay wide enough to read comfortably */
+@media screen and (max-width: 699px) {
+    #content {
+        width: 88%;
+    }
+}
+ 

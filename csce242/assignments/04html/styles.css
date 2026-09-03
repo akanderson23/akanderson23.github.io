@@ -1,0 +1,286 @@
+/* Structure */
+body {
+    font-family: Georgia, Verdana, sans-serif;
+    background-color: white;
+    margin: 0;
+    color: #000000;
+}
+#content {
+    width: 100%;
+}
+/* Utility Nav */
+#utility-nav {
+    background-color: #000000;
+}
+#utility-nav ul, #utility-nav li {
+    list-style-type: none;
+    padding-left: 0;
+}
+#utility-nav li {
+    padding: 8px 10px;
+}
+#utility-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.85em;
+}
+/* Header */
+#main-header {
+    background-color: #000000;
+    padding: 15px 5%;
+}
+#logo-wrap {
+    padding: 5px;
+}
+#logo-sub {
+    color: white;
+    margin: 0;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+#logo-main {
+    color: white;
+    margin: 0;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+#main-header h1 {
+    color: white;
+    margin: 0;
+    padding: 15px;
+}
+/* Main Nav */
+#main-nav {
+    background-color: #76020A;
+}
+#main-nav ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+#main-nav li {
+    padding: 15px 5px;
+    text-align: center;
+}
+#main-nav a {
+    color: white;
+    text-decoration: none;
+}
+/* Intro */
+#intro {
+    background-color: white;
+    padding: 20px 5%;
+}
+#intro p {
+    font-size: 1.2em;
+}
+/* Feature Blocks (photo with text box overlaid) */
+.feature-block {
+    position: relative;
+}
+.feature-text {
+    position: absolute;
+    bottom: 5%;
+    background-color: #76020A;
+    color: white;
+    padding: 20px;
+    max-width: 40%;
+}
+.feature-text--right {
+    right: 5%;
+}
+.feature-text--left {
+    left: 5%;
+}
+.feature-text h2 {
+    margin-top: 0;
+}
+.feature-link {
+    display: inline-block;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+/* Quote */
+#quote {
+    padding: 30px 5%;
+}
+#quote-text {
+    padding: 20px;
+}
+#quote-author {
+    font-weight: bold;
+    color: #76020A;
+}
+/* Mini Cards */
+#mini-cards {
+    padding: 20px 5%;
+}
+.card {
+    padding: 10px;
+    text-align: center;
+}
+.card h3 {
+    color: #76020A;
+}
+/* Stay Connected */
+#stay-connected {
+    background-color: white;
+    color: #76020A;
+    text-align: center;
+    padding: 30px 5%;
+}
+#stay-connected h2 {
+    color: #76020A;
+}
+#stay-connected ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+#stay-connected li {
+    padding: 10px;
+}
+#stay-connected a {
+    display: inline-block;
+    background-color: #76020A;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+/* Unit Footer (light gray band above the garnet footer) */
+#unit-footer {
+    background-color: #f2f2f2;
+    padding: 20px 5%;
+}
+#unit-footer h2 {
+    color: #76020A;
+    margin-top: 0;
+}
+#unit-footer-social {
+    list-style-type: none;
+    padding-left: 0;
+}
+#unit-footer-social li {
+    display: inline-block;
+    padding: 5px 10px 0 0;
+}
+#unit-footer-social a {
+    color: #76020A;
+    text-decoration: none;
+}
+#unit-footer-nav {
+    list-style-type: none;
+    padding-left: 0;
+}
+#unit-footer-nav li {
+    padding: 3px 0;
+}
+#unit-footer-nav a {
+    color: #000000;
+    text-decoration: none;
+}
+/* Footer Links */
+#footer-links header {
+    position: relative;
+}
+#footer-social {
+    list-style-type: none;
+    width: fit-content;
+    margin: auto;
+    padding-left: 0;
+}
+#footer-social li {
+    display: inline-block;
+    padding: 5px 10px;
+}
+#footer-social a {
+    color: white;
+    text-decoration: none;
+}
+#footer-links-title {
+    width: fit-content;
+    margin: auto;
+    align-items: baseline;
+}
+#footer-links {
+    background: #76020A;
+    color: white;
+    padding-top: 15px;
+}
+#footer-links a {
+    color: white;
+    text-decoration: none;
+}
+#footer-links h3 {
+    text-transform: uppercase;
+}
+#footer-links .columns section {
+    padding: 10px;
+}
+#footer-links section ul {
+    column-width: 200px;
+    column-gap: 10px;
+    padding-left: 0;
+    list-style-type: none;
+}
+/* Footer Copy */
+#footer-copy {
+    background: #000000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+#footer-copy a {
+    color: white;
+}
+/* Images */
+img {
+    max-width: 100%;
+}
+/* Columns for all devices */
+.columns-mobile {
+    display: flex;
+}
+/* Responsive Design */
+@media (min-width: 1000px) {
+    #footer-social {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+    }
+    #content {
+        width: 80%;
+        margin: auto;
+    }
+    .columns {
+        display: flex;
+    }
+    #main-header {
+        justify-content: space-between;
+        align-items: center;
+    }
+    #main-nav li {
+        flex: 1;
+        border: 0;
+    }
+    .one {
+        flex: 1;
+    }
+    .two {
+        flex: 2;
+    }
+    .three {
+        flex: 3;
+    }
+    .four {
+        flex: 4;
+    }
+    .five {
+        flex: 5;
+    }
+    .six {
+        flex: 6;
+    }
+}

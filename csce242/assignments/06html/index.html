@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Assignment 8 - CSCE 242</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="content">
+    <header>
+      <h1>CSCE 242</h1>
+      <h2>Adam Anderson</h2>
+    </header>
+
+    <p><a href="../../index.html">&larr; Back to CSCE 242</a></p>
+
+    <h2 id="page-title">Assignment 8</h2>
+    <h3 class="page-subtitle">If Statements</h3>
+
+    <nav id="assignment-nav">
+      <a href="#" id="nav-toggle">&#9660;</a>
+      <ul id="nav-list">
+        <li><a href="#" id="link-exercise1">Exercise 1</a></li>
+        <li><a href="#" id="link-exercise2">Exercise 2</a></li>
+      </ul>
+    </nav>
+
+    <div class="columns assignment-columns">
+
+      <!-- Exercise 1 -->
+      <section class="project-card six" id="exercise1">
+        <h3>Missing Class Point Deductions</h3>
+        <div class="attendance-row">
+          <label for="daysMissed">How many days do you intend to miss class?</label>
+          <input type="number" id="daysMissed" min="0" max="25">
+        </div>
+        <p id="attendanceOutput"></p>
+      </section>
+
+      <!-- Exercise 2 -->
+      <section class="project-card six hide" id="exercise2">
+        <h3>End of Semester Counter</h3>
+        <p id="daysLeftOutput"></p>
+      </section>
+
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Adam Anderson. Go Cocks.</p>
+    </footer>
+  </div>
+  <script src="scripts/assignment8.js"></script>
+</body>
+
+</html>

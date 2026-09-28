@@ -1,0 +1,233 @@
+/*
+  CSS Art resources:
+  - Road, lane lines, and cars were drawn from scratch with positioned divs.
+  - Dashed lane lines use repeating-linear-gradient, based on the MDN docs:
+    https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/repeating-linear-gradient
+*/
+
+/* Structure */
+:root {
+    --background:#F4F6F8;
+    --headings: #1F3A5F;
+    --hero: #DCE6EE;
+    --cards-bg:#FFFFFF;
+    --cards-border:#8FA3B3;
+    --muted-details:#8FA3B3;
+    --accent-text:#D97742;
+
+    --grass: #6BAF4B;
+    --grass-dark: #5E9E40;
+    --asphalt: #34383D;
+    --line-white: #F2F2F2;
+    --line-yellow: #F2C230;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    padding:0px;
+    margin:0px;
+}
+
+#content {
+    padding:15px;
+}
+
+h1, h2, h3 {
+    color: var(--headings);
+}
+
+/* Page Title */
+#page-title {
+    margin: 22px 0 12px;
+    padding: 8px 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.page-subtitle {
+    color: var(--accent-text);
+    margin: 0 0 20px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Card */
+.project-card {
+    background: var(--cards-bg);
+    border: 2px solid var(--cards-border);
+    box-shadow: 4px 4px 0 var(--cards-border);
+    margin-bottom:18px;
+}
+
+.project-card h3 {
+    margin: 0;
+    padding: 12px 16px;
+    background: var(--hero);
+    text-align: center;
+}
+
+/* Scene (grass) */
+#scene {
+    padding: 50px 0;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--grass) 0 30px,
+        var(--grass-dark) 30px 60px
+    );
+}
+
+/* Road */
+#road {
+    position: relative;
+    height: 280px;
+    background: var(--asphalt);
+    border-top: 6px solid var(--line-white);
+    border-bottom: 6px solid var(--line-white);
+    overflow: hidden;
+}
+
+/* White dashed lines between same-direction lanes */
+.lane-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: repeating-linear-gradient(
+        90deg,
+        var(--line-white) 0 40px,
+        transparent 40px 80px
+    );
+}
+
+#line-top {
+    top: 68px;
+}
+
+#line-bottom {
+    top: 208px;
+}
+
+/* Double yellow line down the middle */
+.center-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 134px;
+    height: 12px;
+    background: linear-gradient(
+        var(--line-yellow) 0 4px,
+        transparent 4px 8px,
+        var(--line-yellow) 8px 12px
+    );
+}
+
+/* Car (built by JavaScript) */
+.car {
+    position: absolute;
+    width: 90px;
+    height: 50px;
+}
+
+.car.facing-left {
+    transform: scaleX(-1);
+}
+
+.car .roof {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 46px;
+    height: 22px;
+    background: var(--car-color);
+    border-radius: 12px 14px 0 0;
+    filter: brightness(0.85);
+}
+
+/* windows */
+.car .roof::before,
+.car .roof::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 16px;
+    height: 12px;
+    background: #BFE3F5;
+    border-radius: 4px 4px 0 0;
+}
+
+.car .roof::before {
+    left: 5px;
+}
+
+.car .roof::after {
+    right: 5px;
+    border-top-right-radius: 8px;
+}
+
+.car .body {
+    position: absolute;
+    left: 0;
+    top: 18px;
+    width: 90px;
+    height: 22px;
+    background: var(--car-color);
+    border-radius: 8px 12px 6px 6px;
+}
+
+.car .headlight,
+.car .taillight {
+    position: absolute;
+    top: 23px;
+    width: 6px;
+    height: 6px;
+}
+
+.car .headlight {
+    right: 0;
+    background: #FFF3A0;
+    border-radius: 50% 0 0 50%;
+}
+
+.car .taillight {
+    left: 0;
+    background: #E03B3B;
+    border-radius: 0 3px 3px 0;
+}
+
+.car .wheel-back,
+.car .wheel-front {
+    position: absolute;
+    top: 30px;
+    width: 14px;
+    height: 14px;
+    background: #1C1C1C;
+    border: 3px solid #8A8A8A;
+    border-radius: 50%;
+}
+
+.car .wheel-back {
+    left: 10px;
+}
+
+.car .wheel-front {
+    right: 10px;
+}
+
+/* Footer */
+footer {
+    color: var(--muted-details);
+    text-align:center;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
+
+/* 1000px or larger */
+@media (min-width: 1000px) {
+    #content {
+        width:80%;
+        margin:auto;
+        padding:15px 0;
+    }
+}

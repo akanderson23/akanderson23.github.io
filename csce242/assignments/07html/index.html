@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Assignment 10 - CSCE 242</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="content">
+    <header>
+      <h1>CSCE 242</h1>
+      <h2>Adam Anderson</h2>
+    </header>
+
+    <p><a href="../../index.html">&larr; Back to CSCE 242</a></p>
+
+    <h2 id="page-title">Assignment 10</h2>
+    <h3 class="page-subtitle">Arrays</h3>
+
+    <section class="project-card" id="trip-planner">
+      <h3>Trip Planner</h3>
+
+      <div class="picker-row">
+        <label for="destination-type">Pick Your Destination Type</label>
+        <select id="destination-type">
+          <option value="">Select</option>
+          <option value="beaches">Beaches</option>
+          <option value="parks">National Parks</option>
+        </select>
+      </div>
+
+      <ul id="destination-list"></ul>
+
+      <div id="map-container" class="hide">
+        <h4 id="map-title"></h4>
+        <iframe id="map-frame" title="Map of selected destination" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 Adam Anderson. Go Cocks.</p>
+    </footer>
+  </div>
+  <script src="scripts/assignment10.js"></script>
+</body>
+
+</html>

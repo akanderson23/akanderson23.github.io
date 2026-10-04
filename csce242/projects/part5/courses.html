@@ -46,16 +46,16 @@
             <section id="filter-bar">
                 <div class="container">
                     <ul id="filter-list">
-                        <li><a href="#" class="selected">All</a></li>
-                        <li><a href="#">Budgeting</a></li>
-                        <li><a href="#">Investing</a></li>
-                        <li><a href="#">Debt</a></li>
-                        <li><a href="#">Retirement</a></li>
-                        <li><a href="#">Taxes</a></li>
+                        <li><button class="selected">All</button></li>
+                        <li><button>Budgeting</button></li>
+                        <li><button>Investing</button></li>
+                        <li><button>Debt</button></li>
+                        <li><button>Retirement</button></li>
+                        <li><button>Taxes</button></li>
                     </ul>
                     <div id="search-box">
                         <img src="images/icon-search.svg" alt="">
-                        <input type="text" placeholder="Search courses...">
+                        <input type="text" id="search-courses" placeholder="Search courses...">
                     </div>
                 </div>
             </section>
@@ -65,7 +65,7 @@
                     <div class="course-grid">
                         <div class="course-card">
                             <a href="course.html">
-                                <img src="images/course-budgeting.jpg" alt="Budgeting Fundamentals" class="course-image">
+                                <img src="images/course-budgeting.svg" alt="Budgeting Fundamentals" class="course-image">
                             </a>
                             <div class="course-info">
                                 <p class="course-category">Budgeting</p>
@@ -79,7 +79,7 @@
                             </div>
                         </div>
                         <div class="course-card">
-                            <img src="images/course-investing.jpg" alt="Stock Market Basics" class="course-image">
+                            <img src="images/course-investing.svg" alt="Stock Market Basics" class="course-image">
                             <div class="course-info">
                                 <p class="course-category">Investing</p>
                                 <h3>Stock Market Basics</h3>
@@ -92,7 +92,7 @@
                             </div>
                         </div>
                         <div class="course-card">
-                            <img src="images/course-credit.jpg" alt="Credit Score Mastery" class="course-image">
+                            <img src="images/course-credit.svg" alt="Credit Score Mastery" class="course-image">
                             <div class="course-info">
                                 <p class="course-category">Debt</p>
                                 <h3>Credit Score Mastery</h3>
@@ -105,7 +105,7 @@
                             </div>
                         </div>
                         <div class="course-card">
-                            <img src="images/course-retirement.jpg" alt="Retirement Planning 101" class="course-image">
+                            <img src="images/course-retirement.svg" alt="Retirement Planning 101" class="course-image">
                             <div class="course-info">
                                 <p class="course-category">Retirement</p>
                                 <h3>Retirement Planning 101</h3>
@@ -118,7 +118,7 @@
                             </div>
                         </div>
                         <div class="course-card">
-                            <img src="images/course-taxes.jpg" alt="Tax Strategy Simplified" class="course-image">
+                            <img src="images/course-taxes.svg" alt="Tax Strategy Simplified" class="course-image">
                             <div class="course-info">
                                 <p class="course-category">Taxes</p>
                                 <h3>Tax Strategy Simplified</h3>
@@ -131,7 +131,7 @@
                             </div>
                         </div>
                         <div class="course-card">
-                            <img src="images/course-emergency.jpg" alt="Emergency Fund Blueprint" class="course-image">
+                            <img src="images/course-emergency.svg" alt="Emergency Fund Blueprint" class="course-image">
                             <div class="course-info">
                                 <p class="course-category">Budgeting</p>
                                 <h3>Emergency Fund Blueprint</h3>
@@ -144,6 +144,7 @@
                             </div>
                         </div>
                     </div>
+                    <p id="no-results" class="hidden">No courses match your search. Try a different word or category.</p>
                     <div id="load-more">
                         <a href="#" class="btn btn-gold">Load More Courses</a>
                     </div>
@@ -213,5 +214,6 @@
         </footer>
 
         <script src="scripts/script.js"></script>
+        <script src="scripts/courses.js"></script>
     </body>
 </html>

@@ -481,19 +481,23 @@ p {
     margin: 0 0 20px;
 }
 
-#filter-list a {
-    display: block;
+#filter-list button {
     background-color: var(--white);
     border: 1px solid var(--border);
     border-radius: 20px;
     color: var(--navy);
+    font-family: 'Geist', Arial, Helvetica, sans-serif;
     font-size: 14px;
     font-weight: 600;
-    text-decoration: none;
     padding: 10px 20px;
+    cursor: pointer;
 }
 
-#filter-list a.selected {
+#filter-list button:hover {
+    border-color: var(--navy);
+}
+
+#filter-list button.selected {
     background-color: var(--navy);
     border-color: var(--navy);
     color: var(--white);
@@ -525,6 +529,8 @@ p {
 }
 
 .course-card {
+    display: flex;
+    flex-direction: column;
     background-color: var(--white);
     border: 1px solid var(--border);
     border-radius: 16px;
@@ -537,7 +543,11 @@ p {
     object-fit: cover;
 }
 
+/* info fills the card so every Enroll button lines up at the bottom */
 .course-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
     padding: 32px;
 }
 
@@ -561,7 +571,7 @@ p {
 
 .instructor {
     font-size: 14px;
-    margin-top: 12px;
+    margin: 12px 0 20px;
 }
 
 .course-meta {
@@ -570,13 +580,20 @@ p {
     border-top: 1px solid var(--border);
     font-size: 13px;
     padding-top: 12px;
-    margin: 20px 0;
+    margin: auto 0 20px;
 }
 
 .course-meta span {
     display: flex;
     align-items: center;
     gap: 6px;
+}
+
+#no-results {
+    color: var(--navy);
+    font-size: 18px;
+    text-align: center;
+    padding: 40px 0;
 }
 
 #load-more {
@@ -888,6 +905,11 @@ p {
 .faq p {
     font-size: 15px;
     margin-top: 12px;
+}
+
+/* Hidden (used by the course filter) - kept last so it beats display: flex on the cards */
+.hidden {
+    display: none;
 }
 
 /* Responsive Design */

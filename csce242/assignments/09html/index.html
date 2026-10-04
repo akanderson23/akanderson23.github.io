@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Assignment 11 - CSCE 242</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div id="content">
+    <p id="back-link"><a href="../../index.html">&larr; Back to CSCE 242</a></p>
+
+    <h1>Vacations</h1>
+    <h2>Vacation Experiences</h2>
+
+    <section id="vacation-gallery"></section>
+
+    <footer>
+      <p>&copy; 2026 Adam Anderson. Go Cocks.</p>
+    </footer>
+  </div>
+
+  <!-- Modal dialog, filled in from the Vacation class when a card is clicked -->
+  <div id="vacation-modal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top">
+      <div class="w3-container" id="modal-body">
+        <span id="modal-close" class="w3-button w3-display-topright">&times;</span>
+        <iframe id="modal-map" title="Map of vacation destination" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div id="modal-info">
+          <h3 id="modal-title"></h3>
+          <p><strong>Type:</strong> <span id="modal-type"></span></p>
+          <p><strong>Description:</strong> <span id="modal-description"></span></p>
+          <p><strong>Things To Do:</strong> <span id="modal-things"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/assignment11.js"></script>
+</body>
+
+</html>

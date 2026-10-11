@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Courses | MoneyWise</title>
+        <link rel="icon" href="images/icon-chart-line.svg">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Outfit:wght@600;700&display=swap">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header id="main-header">
+            <div class="container" id="header-inner">
+                <a href="index.html" class="logo">
+                    <img src="images/icon-chart-line.svg" alt="">
+                    MoneyWise
+                </a>
+                <div id="toggle-nav">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <nav id="main-nav" class="hide-small">
+                    <ul id="nav-links">
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                    <ul id="nav-account">
+                        <li><a href="#">Sign In</a></li>
+                        <li><a href="pricing.html" class="btn btn-navy">Get Started</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <section class="section navy-bg page-hero">
+                <div class="container">
+                    <p class="eyebrow">Course Catalog</p>
+                    <h1>Learn Money Skills That Last</h1>
+                    <p class="hero-intro">Practical, structured visual modules covering everything you need to build and scale your family budget, pay off liability, and plan long-term investing securely.</p>
+                </div>
+            </section>
+
+            <section id="filter-bar">
+                <div class="container">
+                    <ul id="filter-list">
+                        <li><button class="selected">All</button></li>
+                        <li><button>Budgeting</button></li>
+                        <li><button>Investing</button></li>
+                        <li><button>Debt</button></li>
+                        <li><button>Retirement</button></li>
+                        <li><button>Taxes</button></li>
+                    </ul>
+                    <div id="search-box">
+                        <img src="images/icon-search.svg" alt="">
+                        <input type="text" id="search-courses" placeholder="Search courses...">
+                    </div>
+                </div>
+            </section>
+
+            <section id="courses" class="section">
+                <div class="container">
+                    <!-- course cards are built from json/courses.json in scripts/courses.js -->
+                    <div class="course-grid" id="course-grid"></div>
+                    <p id="loading-message">Loading courses...</p>
+                    <p id="no-results" class="hidden">No courses match your search. Try a different word or category.</p>
+                </div>
+            </section>
+
+            <section class="section cta border-top">
+                <div class="container">
+                    <div class="section-title centered">
+                        <p class="eyebrow">Personalized Education Pathway</p>
+                        <h2>Not Sure Where to Start?</h2>
+                        <p>Take our quick 2-minute diagnostic quiz. We will evaluate your current financial literacy stage and match you with the precise learning modules you need next.</p>
+                        <a href="#" class="btn btn-gold">Take Our Quiz</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="main-footer">
+            <div class="container">
+                <div id="footer-top">
+                    <div id="footer-brand">
+                        <a href="index.html" class="logo">
+                            <img src="images/icon-chart-line-gold.svg" alt="">
+                            MoneyWise
+                        </a>
+                        <p>Total financial clarity — no surprises. Building a world of confident wealth stewards.</p>
+                    </div>
+                    <div id="footer-link-groups">
+                        <section>
+                            <h4>Learn</h4>
+                            <ul>
+                                <li><a href="courses.html">All Courses</a></li>
+                                <li><a href="courses.html">Budgeting Guides</a></li>
+                                <li><a href="courses.html">Investment Basics</a></li>
+                                <li><a href="courses.html">Debt Strategies</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="about.html">Our Mission</a></li>
+                                <li><a href="#">Careers</a></li>
+                                <li><a href="about.html#contact">Contact</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h4>Connect</h4>
+                            <ul>
+                                <li><a href="#">Newsletter</a></li>
+                                <li><a href="#">Community Forum</a></li>
+                                <li><a href="#">Help Center</a></li>
+                                <li><a href="#">Support</a></li>
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+                <div id="footer-bottom">
+                    <p>&copy; 2026 MoneyWise Education Inc. All rights reserved.</p>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="scripts/script.js"></script>
+        <script src="scripts/courses.js"></script>
+    </body>
+</html>

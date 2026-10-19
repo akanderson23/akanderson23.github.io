@@ -78,6 +78,10 @@ a:hover {
     margin-top: 8px;
     font-weight: bold;
 }
+
+.card-info .link-gap {
+    margin-right: 24px;
+}
  
 /* Responsive Design */
  
